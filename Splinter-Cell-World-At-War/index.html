@@ -20,8 +20,15 @@
 
         gtag('config', 'UA-172748671-1');
     </script>
+    <style>
+        .more {
+            bottom: 12em !important;
+        }
+    </style>
     <script data-ad-client="ca-pub-2291394327851441" async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script src="https://lukasz26671.github.io/Skrypty/jquery.scrollex.min.js"></script>
+    <script src="https://lukasz26671.github.io/Skrypty/jquery.scrolly.min.js"></script>
     <title>Rozdziały</title>
 </head>
 
@@ -31,19 +38,24 @@
             style="background-image: url('../img/index/211408812-256-k912625_photos_v2_x4.jpg'); background-size: contain; background-repeat: no-repeat; background-position-x: 50%;">
             <div id="opener" class="inner">
                 <header class="major">
-                    <br>
+                    <ul class="actions">
+                        <li><a onclick="location.href='../index.html'" class="button">Książki</a></li>
+                        <li><a onclick="location.href='https://lukasz26671.github.io'" class="button">Strona główna</a></li>
+                    </ul>
+                    <a href="#spisTresci" class="more scrolly">Spis treści</a>
                 </header>
             </div>
         </section>
         <section class="wrapper style6 special" style="background-color: rgba(36, 36, 36, 0.95);">
-            <div class="inner" style="width: 80%;">
+            <div id="spisTresci" class="inner" style="width: 80%;">
                 <header class="major">
                     <h2>Lista rozdziałów</h2>
                     <div id="about" style="text-align:left" class="about">
                         <div class="chapter">
-                            <div class="episode unselectable">
+                            <div class="episode unselectable" onclick="location.href = './prolog.html'">
                                 <div class="episodeImage unselectable">
-                                    <img id='1' src='https://d.wattpad.com/story_parts/827278797/images/15e986f54864d5ae372143829759.jpg'>
+                                    <img id='1'
+                                        src='https://d.wattpad.com/story_parts/827278797/images/15e986f54864d5ae372143829759.jpg'>
                                 </div>
                                 <div class="episodeInfo">
                                     <h1 class="episodeTitle">
@@ -57,7 +69,7 @@
                         </div>
                         <div class="chapter">
                             <h1>Chapter 1: Throwback</h1>
-                            <div class="episode unselectable">
+                            <div class="episode unselectable" onclick="location.href = './chapter1/roz1.html'">
                                 <div class="episodeImage unselectable">
                                     <img id='1' src='../img/Chapter1_Throwback/przeprowadzka.jpg'>
                                 </div>
@@ -70,9 +82,10 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="episode unselectable">
+                            <div class="episode unselectable" onclick="location.href = './chapter1/roz2.html'">
                                 <div class="episodeImage unselectable">
-                                    <img id='1' src='https://d.wattpad.com/story_parts/827833711/images/15ea1b1298a2a64f171222048784.jpg'>
+                                    <img id='1'
+                                        src='https://d.wattpad.com/story_parts/827833711/images/15ea1b1298a2a64f171222048784.jpg'>
                                 </div>
                                 <div class="episodeInfo">
                                     <h1 class="episodeTitle">
@@ -83,9 +96,10 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="episode unselectable">
+                            <div class="episode unselectable" onclick="location.href = './chapter1/roz3.html'">
                                 <div class="episodeImage unselectable">
-                                    <img id='1' src='https://images.genius.com/bacb65ba23317a8c8ceecb4bd8fd4c63.1000x1000x1.jpg'>
+                                    <img id='1'
+                                        src='https://images.genius.com/bacb65ba23317a8c8ceecb4bd8fd4c63.1000x1000x1.jpg'>
                                 </div>
                                 <div class="episodeInfo">
                                     <h1 class="episodeTitle">
@@ -96,7 +110,7 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="episode unselectable">
+                            <div class="episode unselectable" onclick="location.href = './chapter1/roz4.html'">
                                 <div class="episodeImage unselectable">
                                     <img id='1' src='https://img.youtube.com/vi/aFYDTc104m4/0.jpg'>
                                 </div>
@@ -109,7 +123,7 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="episode unselectable">
+                            <div class="episode unselectable" onclick="location.href = './chapter1/roz5.html'">
                                 <div class="episodeImage unselectable">
                                     <img id='1' src='https://img.youtube.com/vi/giMB1TXglhw/0.jpg'>
                                 </div>
@@ -139,6 +153,19 @@
                         <div class="chapter">
                             <h1>Chapter 2: Blackout</h1>
                             TBA
+                            <div class="episode unselectable invisible" onclick="alert('Coming soon!')">
+                                <div class="episodeImage unselectable">
+                                    <img id='1' src='../img/Chapter1_Throwback/TS-Proxima.jpg'>
+                                </div>
+                                <div class="episodeInfo">
+                                    <h1 class="episodeTitle">
+                                        Run Like a Rebel - On Tour
+                                    </h1>
+                                    <span class="episodeDescription">
+                                        COMING SOON
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <hr>
@@ -150,4 +177,5 @@
     <script defer src="https://lukasz26671.github.io/Skrypty/util.js"></script>
     <script defer src="https://lukasz26671.github.io/Skrypty/main2.js"></script>
 </body>
+
 </html>
