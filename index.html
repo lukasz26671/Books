@@ -27,14 +27,21 @@
         body.landing.is-loading.noload > #opener:after {
             background: linear-gradient(to top, transparent, transparent);
         }
+        .more {
+            bottom: 12em !important;
+        }
+        #page-wrapper {
+            background-image: url('./img/index/starsGalaxy.gif') !important;
+        }
     </style>
 </head>
 <body class="landing noload">
     <div id="page-wrapper">
         <section class="style6 wrapper special noload">
             <div id="opener" class="inner">
-                <header class="major">
-                    <h1>Książki</h1>
+                <header class="major banner">
+                    <li><a href="#" onclick="location.href = 'https://lukasz26671.github.io'" class="button special big">Powróć do strony głównej</a></li>
+                    <a href="#about" class="more scrolly">Przejdź dalej!</a>
                 </header>
             </div>
         </section>
@@ -44,7 +51,7 @@
                     <h2>Książki</h2>
                     <div id="about" style="text-align:left" class="about">
                         <div class="chapter">
-                            <div class="episode unselectable">
+                            <div class="episode unselectable" onclick="location.href = './Splinter-Cell-World-At-War/index.html'">
                                 <div class="episodeImage unselectable">
                                     <img id='1' src='./img/index/211408812-256-k912625_photos_v2_x4.jpg'>
                                 </div>
@@ -53,7 +60,8 @@
                                         Splinter Cell: World At War
                                     </h1>
                                     <span class="episodeDescription">
-                                        
+                                        Świat stoi w przededniu trzeciej wojny światowej. Rząd USA boi się zainterweniować w obawie o wymianę nuklearną...
+                                        Decydują się wysłać agenta specjalnego polskiej jednostki GROM na samobójczą misję w teren wroga.
                                     </span>
                                 </div>
                             </div>
