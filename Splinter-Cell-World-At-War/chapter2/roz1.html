@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://lukasz26671.github.io/CSS/main.css">
+    <link rel="stylesheet" href="../../../lukasz26671.github.io/lukasz26671.github.io/css/main.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://lukasz26671.github.io/Skrypty/jquery.scrollex.min.js"></script>
+    <script src="https://lukasz26671.github.io/Skrypty/jquery.scrolly.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172748671-1"></script>
+    <link rel="stylesheet" href="../ep.css">
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-172748671-1');
+    </script>
+    <style>
+        *:root {
+            zoom: 0.8;
+        }
+    </style>
+    <script data-ad-client="ca-pub-2291394327851441" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        let lang = 'eng';
+        function translate(_i = 0) {
+            ((_i) => {
+                const translatableDialogues = document.querySelectorAll('div.dialogue.translatable');
+                const dialogueLayout = {
+                    pl: [
+                        `
+                        `,
+                    ],
+                    eng: [
+                        `>
+                        `,
+                    ]
+                }
+                const loopUntil = (obj, i) => (i < obj.length && i < translatableDialogues.length)
+
+                if (lang === 'eng') {
+                    lang = 'pol'
+
+                    // for (let i = 0; loopUntil(dialogueLayout.pl, i); i++) {                        
+                    //     translatableDialogues[i].innerHTML = dialogueLayout.pl[i];
+                    // }
+                    translatableDialogues[_i].innerHTML = dialogueLayout.pl[_i];
+                } else {
+                    lang = 'eng';
+
+                    // for (let i = 0; loopUntil(dialogueLayout.eng, i); i++) {                        
+                    //     translatableDialogues[i].innerHTML = dialogueLayout.eng[i];
+                    // }
+                    translatableDialogues[_i].innerHTML = dialogueLayout.eng[_i];
+                }
+
+            })(_i);
+        }
+    </script>
+    <title>Poligon GROM</title>
+</head>
+
+<body id="body" class="landing">
+    <div id="page-wrapper">
+        <section class="style6 wrapper special">
+            <div class="inner">
+                <header class="major">
+                    <img style="width: 100%" src="../../img/Chapter2_Blackout/Poligon.jpg" alt="">
+                    <ul class="actions">
+                        <li><a onclick="location.href='../chapter1/roz6.html'" class="button">Poprzedni rozdział</a></li>
+                        <li><a onclick="location.href='../index.html'" class="button">Spis treści</a></li><br>
+                        <li>UWAGA! rozdział z multimediami. Jeżeli chcesz najlepiej przeżyć emocje związane z każdym
+                            rozdziałem, przesłuchaj/oglądnij każde wideo do końca. Gdyby wideo nie mogło się załadować,
+                            poczekaj chwilę i odśwież stronę.</li>
+                    </ul>
+                </header>
+            </div>
+        </section>
+        <section class="wrapper style6 special chapterCont" style="background-color: rgba(36, 36, 36, 0.95);">
+            <div class="inner">
+                <header class="major">
+                    <h2>Poligon GROM</h2>
+                    <div id="about" style="text-align:left" class="about">
+                        <p>
+                            COMING SOON
+                        </p>  
+                    </div>
+                    <ul class="actions">
+                        <li><a onclick="alert('Coming soon!')" class="button">Następny rozdział</a></li>
+                    </ul>
+                    <hr>
+                </header>
+                <video src="" volume="0.5"></video>
+            </div>
+        </section>
+    </div>
+    <script>
+        const translatableDialogues = document.querySelectorAll('div.dialogue.translatable');
+        translatableDialogues.forEach((elem, i) => {
+            elem.addEventListener('click', () => {
+                translate(i)
+            })
+        })
+    </script>
+    <script defer src="https://lukasz26671.github.io/Skrypty/skel.min.js"></script>
+    <script defer src="https://lukasz26671.github.io/Skrypty/util.js"></script>
+    <script defer src="https://lukasz26671.github.io/Skrypty/main2.js"></script>
+    <script defer>
+            (() => {
+
+                document.querySelectorAll('img').forEach(img => img.style.borderRadius = '20px')
+
+                const ifContainer = document.querySelectorAll('.iframe-container')
+                const vid = [
+                    '<iframe class="responsive-iframe" src="https://www.youtube.com/embed/IDj_SBw3C_E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+                    '<video onloadstart="this.volume=0.5" controls class="responsive-iframe" src="https://website-audioprovider.herokuapp.com/download?ID=giMB1TXglhw&TYPE=mp4"></video>',
+
+                ]
+                setTimeout(() => {
+
+                    ifContainer.forEach((container, index) => {
+                        const videoIframe = vid[index];
+                        container.innerHTML += videoIframe;
+                    })
+
+                    //ifContainer[0].insertAdjacentHTML( 'beforeend', vid1 );
+
+                    const maxwidth = (px) => window.matchMedia(`(max-width: ${px}px)`).matches
+                    const minwidth = (px) => window.matchMedia(`(min-width: ${px}px)`).matches
+                    try {
+                        if (maxwidth(350)) {
+                            document.querySelectorAll('iframe.responsive-iframe').forEach(elem => {
+                                elem.width = '300';
+                                elem.style.height = "250"
+                            })
+                            document.querySelectorAll('img.responsive-image').forEach(elem => {
+                                elem.style.width = '300';
+                            })
+                        }
+                        else if (maxwidth(320)) {
+                            document.querySelectorAll('iframe.responsive-iframe').forEach(elem => {
+                                elem.width = '230';
+                                elem.height = '200';
+                            })
+                            document.querySelectorAll('.responsive-image').forEach(elem => {
+                                elem.width = '230';
+                                elem.height = '200';
+                            })
+
+                        }
+                        else if (minwidth(1200)) {
+                            document.querySelectorAll('iframe.responsive-iframe').forEach(elem => {
+                                elem.width = '1000';
+                                elem.height = '600';
+                            })
+                            document.querySelectorAll('.responsive-image').forEach(elem => {
+                                elem.style.width = "auto";
+                            })
+                        }
+                        else if (minwidth(900)) {
+                            document.querySelectorAll('iframe.responsive-iframe').forEach(elem => {
+                                elem.width = '800';
+                                elem.height = '600';
+                            })
+                        }
+                        else if (minwidth(700)) {
+                            document.querySelectorAll('iframe.responsive-iframe').forEach(elem => {
+                                elem.width = '500';
+                                elem.height = '400';
+                            })
+
+                            document.querySelectorAll('.responsive-image').forEach(elem => {
+                                elem.style.width = "500";
+                            })
+                        }
+
+
+                    } catch (err) { console.log(err) }
+
+                }, 700);
+            })();
+    </script>
+</body>
+
+</html>
