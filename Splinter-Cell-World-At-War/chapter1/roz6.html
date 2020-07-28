@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://lukasz26671.github.io/CSS/main.css">
+    <link rel="stylesheet" href="../../../lukasz26671.github.io/lukasz26671.github.io/css/main.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://lukasz26671.github.io/Skrypty/jquery.scrollex.min.js"></script>
+    <script src="https://lukasz26671.github.io/Skrypty/jquery.scrolly.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172748671-1"></script>
+    <link rel="stylesheet" href="../ep.css">
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-172748671-1');
+    </script>
+    <style>
+        *:root {
+            zoom: 0.8;
+        }
+    </style>
+    <script data-ad-client="ca-pub-2291394327851441" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        let lang = 'eng';
+        function translate(_i = 0) {
+            ((_i) => {
+                const translatableDialogues = document.querySelectorAll('div.dialogue.translatable');
+                const dialogueLayout = {
+                    pl: [
+                        `
+                        <p><strong>Łukasz</strong>: Więc jak podoba się Wam w Polsce??</p> 
+                        <p><strong>Eddie</strong>: Jest trochę zimno.</p> 
+                        <p><strong>Paweł</strong>: Haha to prawda.</p> 
+                        <p><strong>Łukasz</strong>: Bez wątpienia w LA jest o wiele cieplej.</p> 
+                        <p><strong>Paweł</strong>: Próbowaliście już naszych pierogów?</p> 
+                        <p><strong>Eddie</strong>: Tak szczerze, to chyba zjedliśmy ich tonę!</p> 
+                        <p><strong>Edan</strong>: Więc... Chcielibyście zrobić sobie z nami selfie?</p> 
+                        <p><strong>Łukasz</strong>: Po to tu jesteśmy!</p>
+                        `,
+                        `
+                        <p><strong>Edan</strong> [do Łukasza]: Wyglądasz znajomo, czy my się kiedyś nie spotkaliśmy?</p>
+                        <p><strong>Łukasz</strong>: Yyy, no tak. Pamiętasz ten Hackaton około roku temu w Szwecji?</p>
+                        <p><strong>Edan</strong>: O to ty! Co tam?</p>
+                        <p><strong>Łukasz</strong>: Mogłoby być lepiej, ale jesteśmy bardzo podekscytowani, że tu jesteśmy</p> 
+                        <p><strong>Eddie</strong>: Edan coś wspominał o Tobie. Ty stworzyłeś tą apkę "Vixon"?</p>
+                        <p><strong>Łukasz</strong>: No tak, ale musze się przyznać, że nie było to ani trochę łatwe.</p>
+                        <p><strong>Edan</strong>: Cóż, jeśli nie miałbyś nic przeciwko, to moglibyśmy używać twojego programu? Widzieliśmy, że dodałeś parę nowych rzeczy, które bardzo by nam się przydały.</p>
+                        <p><strong>Łukasz</strong>: Naprawdę pytacie o moją zgodę? No weźcie! Oczywiście, że możecie!</p>
+                        <p><strong>Eddie</strong>: A tak w ogóle, będziecie dzisiaj z nami w Proximie?</p>
+                        <p><strong>Paweł</strong>: Jasne, że będziemy!</p>
+                        <p><strong>Łukasz</strong>: No to do zobaczenia wieczorem!</p>
+                        <p><strong>Edan</strong>: Do zobaczenia!</p>
+                        `,
+                    ],
+                    eng: [
+                        `
+                        <p><strong>Łukasz</strong>: So guys, how do you like Poland?</p> 
+                        <p><strong>Eddie</strong>: Ummm... Cold.</p> 
+                        <p><strong>Paweł</strong>: Haha that's true.</p> 
+                        <p><strong>Łukasz</strong>: No doubt it's a lot warmer in the LA.</p> 
+                        <p><strong>Paweł</strong>: Have you guys tried pierogi yet?</p> 
+                        <p><strong>Eddie</strong>: To be honest, we ate a ton of them!</p> 
+                        <p><strong>Edan</strong>: So, do you wanna take a selfie?</p> 
+                        <p><strong>Łukasz</strong>: That's why we are here!</p>
+                        `,
+                        `
+                        <p><strong>Edan</strong> [do Łukasza]: You look familliar... Have we met before?</p>
+                        <p><strong>Łukasz</strong>: Umm, yeah. Do you remember that Hackathon in Sweden about an year ago?</p>
+                        <p><strong>Edan</strong>: Ohh, it's you! What's up!</p>
+                        <p><strong>Łukasz</strong>: Could've been better but we're really excited to be here.</p> 
+                        <p><strong>Eddie</strong>: Edan mentioned you. You created that app called Vixon?</p>
+                        <p><strong>Łukasz</strong>: Yeah but I have to admit, wasn't easy at all.</p>
+                        <p><strong>Edan</strong>: Well, if you don't mind, can we use your app? We've seen some new features added lately that would be very useful for us.</p>
+                        <p><strong>Łukasz</strong>: Seriously you're asking for my permission? Come on! Of course you can!</p>
+                        <p><strong>Eddie</strong>: So, are you guys gonna be on the show tonight?</p>
+                        <p><strong>Paweł</strong>: Sure we will!</p>
+                        <p><strong>Łukasz</strong>: So, see you tonight!</p>
+                        <p><strong>Edan</strong>: See ya!</p>
+                        `,
+                    ]
+                }
+                const loopUntil = (obj, i) => (i < obj.length && i < translatableDialogues.length)
+
+                if (lang === 'eng') {
+                    lang = 'pol'
+
+                    // for (let i = 0; loopUntil(dialogueLayout.pl, i); i++) {                        
+                    //     translatableDialogues[i].innerHTML = dialogueLayout.pl[i];
+                    // }
+                    translatableDialogues[_i].innerHTML = dialogueLayout.pl[_i];
+                } else {
+                    lang = 'eng';
+
+                    // for (let i = 0; loopUntil(dialogueLayout.eng, i); i++) {                        
+                    //     translatableDialogues[i].innerHTML = dialogueLayout.eng[i];
+                    // }
+                    translatableDialogues[_i].innerHTML = dialogueLayout.eng[_i];
+                }
+
+            })(_i);
+        }
+    </script>
+    <title>Run Like a Rebel - On Tour</title>
+</head>
+
+<body id="body" class="landing">
+    <div id="page-wrapper">
+        <section class="style6 wrapper special">
+            <div class="inner">
+                <header class="major">
+                    <img style="width: 100%" src="../../img/Chapter1_Throwback/Proxima.jpg" alt="">
+                    <ul class="actions">
+                        <li><a onclick="location.href='./roz3.html'" class="button">Poprzedni rozdział</a></li>
+                        <li><a onclick="location.href='../index.html'" class="button">Spis treści</a></li><br>
+                        <li>UWAGA! rozdział z multimediami. Jeżeli chcesz najlepiej przeżyć emocje związane z każdym
+                            rozdziałem, przesłuchaj/oglądnij każde wideo do końca. Gdyby wideo nie mogło się załadować,
+                            poczekaj chwilę i odśwież stronę.</li>
+                    </ul>
+                </header>
+            </div>
+        </section>
+        <section class="wrapper style6 special chapterCont" style="background-color: rgba(36, 36, 36, 0.95);">
+            <div class="inner">
+                <header class="major">
+                    <h2>Run Like a Rebel</h2>
+                    <div id="about" style="text-align:left" class="about">
+                        <p>
+                            Dawno mnie tu nie było, lecz jestem! Tym razem powracamy z tematem koncertu! A to wszystko
+                            stało się 1 marca 2020 roku... Niestety najgorszego roku, który utkwił mi w pamięci.
+                            Dlaczego najgorszego? Zobaczycie...
+                        </p>
+                        <p>
+                            Wstając rano z łóżka, aż zaśpiewałem: "Oto ten dzień, ten wielki dzień" Tak długo czekałem
+                            na ten moment! Już dzisiaj będę mógł spotkać się z Łukaszem i z innymi. Jestem tak
+                            podekscytowany, że chyba zaraz zrobię dziurę w podłodze.
+                            Koncert ma się ogólnie odbyć w klubie Proxima, w Warszawie. Z racji, że już w sumie mieszkam
+                            w naszej przepięknej stolicy, to nie muszę przejeżdżać połowy Polski, tak jak moi
+                            przyjaciele.
+                        </p>
+                        <p>
+                            Schodząc na dół, usłyszałem, jak mój brat, Kamil gra na kompie pff... Ciągle tylko jedno i
+                            to samo, ale nie mogę przecież mówić, że jest jakiś nienormalny, w końcu sam tak kiedyś
+                            robiłem. Znalazł sobie kolegów, zupełnie jak ja i grają ciągle: a to w Minecrafta, a to w
+                            Robloxa. Skubaniec skończył dopiero 5 lat, a już na gry się rzuca... Szacun! Pewnie będzie
+                            kolejny informatyk, zupełnie jak Łukasz.
+                        </p>
+                        <p>
+                            Najlepsze jest to, że niedawno robiliśmy remont w domu, a najbardziej to zmieniła się chyba
+                            klatka schodowa. Kiedyś była obłożona deskami, czy czymś podobnym, nie wiem jak to się
+                            nazywa - mniejsza, teraz dalej nie wiem, czym jest obłożona, ale jest przepiękna. Dosłownie
+                            błyszczy się w śnieżnym kolorze.
+                            Przy okazji nareszcie miałem szansę samemu udekorować sobie pokój, bo Ola (moja macocha)
+                            ciągle miała 'swoją wizję mojego pokoju', no ale come on! Już miałem prawie osiemnaście lat!
+                            Brakowało mi tylko lekko ponad rok i trzy miesiące! Chciałbym już zacząć kurs prawa jazdy,
+                            żeby nie musieć tak długo czekać na te wymarzone uprawnienia do zaprzestania używania
+                            komunikacji miejskiej, albo telefonu do tatusia, żeby gdziekolwiek się dostać, no ale
+                            jeszcze nie mogę...
+                        </p>
+                        <p>
+                            Tak w ogóle nie mówiłem, ale nauczyłem tatę programować i powiem, że był to świetny pomysł!
+                            Kiedyś zarabiał dość przeciętnie, a teraz żyjemy praktycznie w luksusie. Jeju! Nigdy bym nie
+                            przypuszczał, że mój tata przekwalifikuje się po tylu latach pracy jako elektryk! Co prawda
+                            moja macocha pracowała w dobrze prosperującej korporacji, ale jednak chciałem, aby mój tata
+                            nie był w większości od niej zależny. Nie miał on może jakiegoś bardzo wysokiego
+                            wykształcenia, co mogło się lekko przełożyć na jego zarobki, ale widziałem, że podoba mu się
+                            nowe stanowisko pracy. Od razu stał się jakiś taki weselszy, mniej zmęczony. Tak naprawdę to
+                            nie wspominałem, ale pracuje w CD Projekt Red. Pracują ostatnio nad tą tak długo wyczekiwaną
+                            grą Cyberpunk 2077. Z historii, które nam opowiadał tata, podobno był bardzo sfrustrowany
+                            tym, że musieli wyciąć tyle contentu z finalnej wersji gry, a nawet przełożyć ją na jesień.
+                            Praktycznie większość mechanik, które opracował w końcu musieli albo tak jak mówię, wyciąć
+                            lub przebudować na wzór 'mainstreamowych' gier. Zamiast czegoś oryginalnego kierownictwo
+                            musiało spaprać sprawę, ehh! Gdybym to ja o tym decydował, to jestem pewien, że gra byłaby
+                            dosłownie hitem!
+                        </p>
+                        <p>
+                            Dobra, dosyć już tych moich przechwałek, zapewne nie można tego słuchać.
+                        </p>
+                        <div class="dialogue">
+                            ***
+                            <p><strong>Ola</strong>: O widzę, że już wstałeś. Jak się spało?</p>
+                            <p><strong>Paweł</strong>: Szczerze powiedziawszy, to tak średnio. Znowu miałem jakiś dziwny
+                                sen...</p>
+                            <p><strong>Ola</strong>: Jaki znowu sen?</p>
+                            <p><strong>Paweł</strong>: Nie wiem, coś o pudlu biegającym z megafonem i krzyczącym coś po
+                                rosyjsku.</p>
+                            <p><strong>Ola</strong>: Ty to masz pomysły... Jesteś może głodny? Bo robię dla nas
+                                śniadanie.</p>
+                            <p><strong>Paweł</strong>: Umieram z głodu. Co będzie?</p>
+                            <p><strong>Ola</strong>: Do wyboru - sałatka warzywna lub omlecik.</p>
+                            <p><strong>Paweł</strong>: Hmm, ciężki wybór... A mogę to i to?</p>
+                            <p><strong>Ola</strong>: Pewnie! Smacznego!</p>
+                            <p><strong>Paweł</strong>: Dzięki. Tak w ogóle wiesz, że to już dzisiaj jest ten koncert?
+                            </p>
+                            <p><strong>Ola</strong>: Koncert? Tego zespołu, który przyjeżdża z USA, którego piosenki tak
+                                śpiewasz po nocach?</p>
+                        </div>
+                        <p>
+                            Muszę przyznać, że byłem lekko zawstydzony.
+                        </p>
+                        <div class="dialogue">
+                            <p><strong>Paweł</strong>: Co? Skąd ty... No taaaa, to ten. Myślałem, że jestem cicho,
+                                przepraszam.</p>
+                            <p><strong>Ola</strong>: Nie przepraszaj! Ładnie śpiewasz, aż miło się tego słucha.</p>
+                            <p><strong>Paweł</strong>: Naprawdę? Myślałem, że to normalnie tragedia, według mnie
+                                fałszuję jak cholera.</p>
+                            <p><strong>Ola</strong>: A co to za brzydkie słówko?</p>
+                            <p><strong>Paweł</strong>: Mamo, daj już spokój, nie mam 10 lat...</p>
+                            <p><strong>Ola</strong>: Przecież żartuję głuptasie. Jedz lepiej, bo mi tu ugłodniejesz!</p>
+                        </div>
+                        <p>
+                            Po śniadaniu mama oczywiście musiała zadać pytanie, na które nie byłem zupełnie
+                            przygotowany.
+                        </p>
+                        <div class="dialogue">
+                            <p><strong>Ola</strong>: Tak w ogóle mówiłeś mi, że poznałeś parę fajnych osób ostatnio, a
+                                wiem, że ciągle ze
+                                sobą rozmawiacie. Powiedz, masz tam jakąś ładną dziewczynę, czy coś?</p>
+                            <p><strong>Paweł</strong>: Yyyyyy...</p>
+                            <p><strong>Ola</strong>: Hm?</p>
+                            <p><strong>Paweł</strong>: Mamo no wiesz co?! Nie wiesz, że spotykam się z Anią?</p>
+                            <p><strong>Ola</strong>: Wiem, ale według mnie nie pasujecie do siebie. Zresztą jest jeszcze
+                                starsza od ciebie
+                                dwa lata. Może powinieneś...</p>
+                            <p><strong>Paweł</strong>: Dosyć tego... Nie mów mi z kim mam się spotykać, a z kim nie!
+                                Wiek akurat nie ma
+                                znaczenia. Mogłabyś się martwić, gdyby była ode mnie starsza z 10-15 lat, a nie dwa
+                                lata!
+                                Chyba lepiej, że spotykam się z nią, niż z jakąś 13-letnią niewychowaną gówniarą.</p>
+                            <p><strong>Ola</strong>: Nie mówię o trzynastolatkach, miałam na myśli bardziej w twoim
+                                wieku - jakaś
+                                piętnasto-szesnastolatka.</p>
+                            <p><strong>Paweł</strong>: Mamo proszę... Daj już spokój...</p>
+                            <p><strong>Ola</strong>: Synku po prostu się o Ciebie martwię. Pamiętasz, co było, kiedy
+                                twój brat skończył
+                                cztery latka?</p>
+                            <p><strong>Paweł</strong>: Wiem i wolę do tego nie wracać. Teraz się nam dobrze układa i nie
+                                mamy żadnych
+                                problemów.2</p>
+                        </div>
+                        <p>
+                            Po tych słowach poszedłem do swojego pokoju. Tak naprawdę to miałem już dość słuchania tych
+                            bzdur. Co wiek ma do tego, czy do siebie pasujemy, czy nie! Wchodząc do pokoju, spoglądam na
+                            zegarek, godzina 10! Panikuję i nie wiem co robić. Przecież niedługo wszyscy przyjadą no
+                            come on! Trywialny problem, ale poważnie no idea, w co się ubrać... Dobra biorę jeansy i
+                            jakąś
+                            bluzę, to wystarczy. Może zadzwonię jeszcze do Ani.
+                        </p>
+                        <div class="dialogue">
+                            <p><strong>Ania</strong>: Hej kochanie! Co tam?</p>
+                            <p><strong>Paweł</strong>: No cześć, dzwonię, bo chciałem się o coś zapytać.</p>
+                            <p><strong>Ania</strong>: No dawaj śmiało.</p>
+                            <p><strong>Paweł</strong>: Pamiętasz, że dzisiaj jest koncert co nie?</p>
+                            <p><strong>Ania</strong>: No... tak, a co?</p>
+                            <p><strong>Paweł</strong>: Miałabyś może czas pójść też ze mną? Bilety nie zostały
+                                wyprzedane i jestem pewien,</p>
+                            że możemy kupić jeden dla Ciebie na miejscu.</p>
+                            <p><strong>Ania</strong>: Bardzo bym chciała, ale nie mogę. Jadę teraz do szpitala.</p>
+                            <p><strong>Paweł</strong>: O Boże, coś się stało?</p>
+                            <p><strong>Ania</strong>: Można tak powiedzieć... Mój tata... miał wypadek.</p>
+                        </div>
+                        <p>
+                            Serce dosłownie zaczęło mi walić z całej siły. Nie wiedziałem nawet co odpowiedzieć...
+                        </p>
+                        <div class="dialogue">
+                            <p><strong>Paweł</strong>: Tak mi przykro... Wiadomo coś konkretnie?</p>
+                            <p><strong>Ania</strong>: Lekarze mówili, że jest w śpiączce.</p>
+                            <p><strong>Paweł</strong>: W którym szpitalu leży?</p>
+                            <p><strong>Ania</strong>: W Wolskim na ul. Kasprzaka 17.</p>
+                            <p><strong>Paweł</strong>: Zaraz tam będę.</p>
+                            <p><strong>Ania</strong>: A co z koncertem?</p>
+                            <p><strong>Paweł</strong>: Gdybym nie zdążył, to znajomi nagrają mi. Trudno, wolę być przy
+                                Tobie.</p>
+                            <p><strong>Ania</strong>: Naprawdę nie wiem co powiedzieć... Dziękuję...</p>
+                        </div>
+                        <p>
+                            Wybiegłem szybko z pokoju i poprosiłem tatę, aby zawiózł mnie do szpitala. Opowiedziałem mu
+                            całą historię i był tak samo zamurowany, jak ja. Przez drogę wspomniałem też o koncercie i o
+                            tym, że nie wiadomo, czy w ogóle tam pójdę. Jedyne co chciałem teraz zrobić, to być z Anią w
+                            tej trudnej dla niej chwili.
+                        </p>
+                        <p>
+                            Chwilę później podjechaliśmy pod SOR. Szybkim krokiem poszliśmy pod oddział intensywnej
+                            terapii. Na korytarzu siedziała Ania, która miała całą twarz we łzach i jej mama, Agata.
+                            Ania wspominała mi, że jej rodzice się rozwiedli przed laty, ale widziałem, że jej mama
+                            wcale nie była mniej przejęta od niej. Razem z tatą usiedliśmy obok nich, wziąłem Anię za
+                            rękę i ją przytuliłem. Wiedziałem, ile on dla niej znaczy. Po rozwodzie zamieszkała właśnie
+                            z nim, a nie z matką. Opowiedziała nam też, co tak naprawdę się stało.
+                        </p>
+                        <p>
+                            Według wstępnych oględzin Policja ustaliła, że bezpośrednim czynnikiem, który spowodował
+                            wypadek była eksplozja opony. Z prędkością około 95km/h, na drodze szybkiego ruchu S7,
+                            samochód przebił się przez barierkę i uderzył w wiadukt, mając po drodze cztery dachowania.
+                            Ucierpiał też jeden z kierowców, jadących tą drogą.
+                            Napisałem także do innych o sytuacji, że ojciec mojej dziewczyny miał wypadek i że nie wiem,
+                            czy na pewno będę. Tak naprawdę to chyba nawet niewerbalnie dawali mi do zrozumienia, że
+                            lepiej, gdy przy niej zostanę. Nie wiem już sam, co mam robić. Wiem, że to musi być dla niej
+                            bardzo ciężkie, sam straciłem mamę i co każdą niedzielę odwiedzam ją na cmentarzu...
+                        </p>
+                        <p>
+                            Wtem obok nas biegnie lekarz i dwie pielęgniarki. Od razu przychodzą nam do głowy najgorsze
+                            scenariusze. Ania nie wytrzymała i wybiegła z oddziału, a ja za nią.
+                        </p>
+                        <div class="dialogue">
+                            <p>
+                                <strong>Ania</strong>: Paweł ja... Ja już po prostu nie mogę... Nie chcę go stracić! Nie
+                                chcę mieszkać z
+                                matką i tym jej facetem... Proszę, powiedz, że wszystko będzie dobrze!
+                            </p>
+                            <p>
+                                <strong>Paweł</strong>: Aniu, proszę Cię... My już nic nie możemy zrobić. Wszystko w
+                                rękach lekarzy, ale
+                                jestem pewien, że Twój tata jeszcze z tego wyjdzie! To silny facet, mówię Ci, nie z
+                                takich
+                                rzeczy ludzie wychodzili.
+                            </p>
+                            <p>
+                                <strong>Ania</strong>: Tyle że... Ja nie wiem... Nie wygląda to za dobrze. Nawet jeżeli,
+                                to w śpiączce będzie
+                                przez nie wiadomo jak długo, a ja nie chcę na to patrzeć! Nie chcę patrzeć na jego,
+                                leżącego
+                                na tym łóżku, uwięzionego we śnie, z którego nie może się wydostać...
+                            </p>
+                            <p>
+                                <strong>Paweł</strong>: Wiesz... Bardzo dobrze Cię rozumiem. Sam przechodziłem to samo,
+                                kiedy zmarła moja
+                                mama. Nie wyobrażałem sobie, że życie ludzkie może się ot tak skończyć, w przeciągu
+                                kilku
+                                chwil. Ale ja wiem, że wszystko będzie dobrze. Musi!
+                            </p>
+                            <p><strong>Ania</strong>: Nie wiem, co ja bym bez Ciebie zrobiła... Dziękuję, że jesteś.</p>
+                        </div>
+                        <p>
+                            Po tych słowach wzięła i przytuliła mnie tak mocno, jak tylko mogła.
+                        </p>
+                        <div class="dialogue">
+                            <p><strong>Paweł</strong>: Wiesz, masz bardzo dużo siły.</p>
+                            <p><strong>Ania</strong>: No wiem głuptasie.</p>
+                            <p><strong>Paweł</strong>: Chodźmy już, może dowiemy się czegoś nowego.</p>
+                        </div>
+                        <p>
+                            Zbliżając się do drzwi oddziału, zauważyliśmy płaczącą Agatę. Wiedzieliśmy, że to nie jest
+                            dobra oznaka.
+                        </p>
+                        <div class="dialogue">
+                            <p><strong>Paweł</strong>: Co się stało? Lekarze mają jakieś informacje?</p>
+                            <p><strong>Tata</strong>: Tak jakby...</p>
+                            <p><strong>Ania</strong>: Mamo?!</p>
+                            <p><strong>Agata</strong>: Lekarze przyszli... I...</p>
+                            <p><strong>(Paweł, Ania)</strong>: I co!?</p>
+                            <p><strong>Agata</strong>: I powiedzieli, że miał rozległy zawał... I że...</p>
+                            <p><strong>Ania</strong> <u style="font-style: italic;">(ze łzami w oczach)</u>: Że co?!</p>
+                            <p><strong>Agata</strong>: Że on... już z tego nie wyjdzie...</p>
+                        </div>
+                        <p>
+                            Słysząc to Ania zsunęła się po ścianie na podłogę i schowała głowę między nogi, głośno
+                            płacząc. Przyznaję, że sam miałem łzy w oczach... Chciałem do niej pójść, ale tata zatrzymał
+                            mnie, mówiąc, że potrzebuje czasu, żeby dojść do siebie. Byłem w szoku... Dopiero widziałem
+                            jej tatę trzy dni temu, kiedy byłem u Ani na kolację, a teraz? Zapadł w śpiączkę, z której
+                            się już nie wybudzi. Zapewne lekarze odłączą go kiedyś od respiratora i przestanie błąkać
+                            się we śnie...
+                        </p>
+                        <p>
+                            Tata nalegał, żebyśmy już pojechali, bo cokolwiek bym powiedział mogłoby ją jeszcze dobić,
+                            tak też zrobiliśmy.
+                            Powiedzieliśmy Agacie, że musimy już jechać i że współczujemy straty tak bliskiej osoby.
+                        </p>
+                        <p>
+                            Pewnie Ania mnie za to znienawidzi... Nie chcę tego, ale muszę coś zrobić. Zostając przy
+                            niej wcale jej nie pomogę, a wręcz przeciwnie. Kiedy poszedłem za nią, powiedziałem jej, że
+                            wszystko będzie dobrze, a parę chwil później dowiedzieliśmy się, że jej tata się już nie
+                            wybudzi. Dosyć tego... Czegokolwiek nie zrobię, tylko wszystko psuję. Po prostu chodźmy już
+                            stąd...
+                        </p>
+                        <p style="text-align: center;">
+                            <strong>**Jakiś czas później**</strong>
+                        </p>
+                        <div class="dialogue">
+                            <p><strong>Ola</strong>: O mój Boże, mówcie, jak on się czuje?</p>
+                            <p><strong>Tata</strong>: To było poważniejsze, niż nam się wydawało...</p>
+                            <p><strong>Paweł</strong>: O wiele...</p>
+                            <p><strong>Ola</strong>: To znaczy?</p>
+                            <p>
+                                <strong>Tata</strong>: Po tym jak zapadł w śpiączkę, dostał rozległego zawału,
+                                prawdopodobnie już się z niej
+                                nie wybudzi.
+                            </p>
+                            <p>
+                                <strong>Ola</strong>: Biedna Ania... Przyznaję, byłam może do niej sceptycznie
+                                nastawiona, ale to przykre
+                                słyszeć, że tak bliska osoba już prawdopodobnie nigdy nie wstanie.
+                            </p>
+                            <p>
+                                <strong>Paweł</strong>: A ja... Kiedy wybiegła po tym, jak lekarze weszli na salę...
+                                Chciałem ją pocieszyć.
+                                Powiedziałem jej, że wszystko będzie dobrze, że jej tata to twardy gość i że się jeszcze
+                                z
+                                tego podniesie... Widziałem ten błysk w jej oku. Błysk nadziei. Błysk, który zgasł, gdy
+                                tylko wróciliśmy przed salę. Mamo ja...
+                            </p>
+                        </div>
+                        <p>
+                            I wtedy łzy stanęły mi w oczach i zacząłem płakać. Czułem się zupełnie, jak po śmierci
+                            swojej mamy. Kamil podszedł do mnie i mocno mnie przytulił. Zrobili tak też moi rodzice,
+                            tyle że to było bezcelowe. Nic już nie przywróci Ani ojca, tylko cud.
+                        </p>
+                        <div class="dialogue">
+                            <p><strong>Tata</strong>: No to jak będzie z tym koncertem synek? Idziesz, czy zostajesz w
+                                domu?</p>
+                            <p>
+                                <strong>Paweł</strong>: Wiesz... Jest mi smutno, ale chciałbym spotkać się z Łukaszem.
+                                Tak dawno go nie
+                                widziałem, więc chyba pójdę.
+                            </p>
+                            <p><strong>Ola</strong>: Idź, rozerwij się, dopóki jesteś młody. To nie czas na smutki. Baw
+                                się dobrze!</p>
+                            <p><strong>Paweł</strong>: Dzięki.</p>
+                        </div>
+                        <p>
+                            Na grupie było już chyba z 5000 wiadomości, każdy jarał się, że wreszcie się spotkamy, a ja
+                            miałem mieszane uczucia. Niby fajnie, ale jednak byłem smutny. Wiem jedno, nie mogę im o tym
+                            powiedzieć. Będę się dobrze bawił i nie będę myślał o tacie Ani. Włączyłem sobie jedną ze
+                            ulubionych piosenek i mogę się wybierać! W sumie była już czternasta, a mieliśmy się spotkać
+                            tak gdzieś mniej więcej o tej godzinie w Złotych Tarasach. No to co? Idziem!
+                        </p>
+                        <p>
+                        <div class="iframe-container"></div>
+                        </p>
+                        <p>
+                            Idąc tak przez ulicę, czułem coraz więcej wibracji w telefonie i występowały one coraz
+                            częściej, więc musiałem sprawdzić co tam się dzieje, czy oni powariowali, czy co?
+                            Patrzę a tu zrobili sobie grupowe pod Sephorą i piszą, że czekają na mnie. Ja pierdzielę, no
+                            to szykuje się niezły sprint - 1.5 km. Ale zanim zrobię sobie nieplanowany trening, wbiję do
+                            sklepu i kupię sobie coś na wszamanie. Jestem głodny jak nie wiem co! Może batonika? Zobaczy
+                            się.
+                        </p>
+                        <p>
+                            Po wyjściu ze sklepu zobaczyłem dość ciekawą rzecz. Coś czego nigdy bym się nie spodziewał,
+                            zupełnie jakbym zobaczył ducha, czy coś. Totalnie mnie zamurowało. Nigdy bym nie uwierzył,
+                            jakby ktoś mi powiedział, że zobaczę tatę Ani idącego z nią przez ulicę, zaraz po tym, kiedy
+                            usłyszałem, że nie wybudzi się już ze śpiączki. A jednak. Tylko... Jak?! Dlaczego mnie
+                            okłamała? Muszę się prędko dowiedzieć. Wiem! Zadzwonię do niej i zobaczymy, co mi powie.
+                        </p>
+                        <p>
+                            Włączyłem połączenie na słuchawkach i zacząłem truchtem biec w ich kierunku. Miałem na
+                            głowie kaptur i komin ze względu na to, że było troszkę chłodnawo, więc nie będzie im łatwo
+                            mnie poznać.
+                            I faktycznie, zatrzymali się na chwile, a dziewczyna wyciągnęła telefon z kieszeni, więc ja
+                            też stanąłem w miejscu, żeby lekko odsapnąć.
+                        </p>
+                        <div class="dialogue">
+                            <p><strong>Paweł</strong>: Aniu, jak się czujesz?</p>
+                            <p><strong>Ania</strong>: Bywało lepiej...</p>
+                            <p><strong>Paweł</strong>: Przepraszam, że wtedy pojechałem ze szpitala, ale nie chciałem
+                                jeszcze pogorszyć
+                                sytuacji. Wiem, że nie mógłbym ci pomóc w żaden sposób, a tylko jeszcze bym cię bardziej
+                                zasmucił.</p>
+                            <p><strong>Ania</strong>: Dobra, nie szkodzi. Co robisz?</p>
+                            <p><strong>Paweł</strong>: Wyszedłem trochę pobiegać, oczyścić głowę z tego wszystkiego. Za
+                                dużo się dziś
+                                wydarzyło... A ty?</p>
+                            <p><strong>Ania</strong>: Jestem dalej w szpitalu, przy tacie. Nie mogę uwierzyć, że mnie
+                                opuścił w tak ważnej
+                                dla mnie chwili...</p>
+                            <p><strong>Paweł</strong>: Mi też jest przykro... Wiem jak się czujesz, chciałbym Ci pomóc,
+                                a jestem bezsilny.</p>
+                            <p><strong>Ania</strong>: Wiesz co, muszę kończyć. Zadzwonię później.</p>
+                        </div>
+                        <p>
+                            Kiedy wypowiadała te słowa, widziałem, że dziewczyna idąca przede mną z tym mężczyzną robi
+                            to samo. Nie było innego wyjścia, to musiała być ona. Nawet słyszałem jej głos, kiedy
+                            ściągnąłem słuchawki. Nie mam już nic do stracenia, idę tam, wygarnę jej wszystko. Mam nawet
+                            plan. Udam, że po prostu biegnę i zapytam się o godzinę, bo rozładował mi się telefon.
+                        </p>
+                        <div class="dialogue">
+                            <p><strong>Paweł</strong>: Przepraszam, że przeszkadzam. Jestem już spóźniony, a rozładował
+                                mi się telefon. Czy
+                                mogłaby mi Pani powiedzieć, która jest godzina? Kompletnie zapomniałem o naładowaniu go
+                                przed wyjściem.</p>
+                            <p><strong>?</strong>: Ależ tak.</p>
+                            <p><strong>Ania</strong>: 14:37.</p>
+                            <p><strong>Paweł</strong>: (Wiedziałem, że to ona. Pora jej to wszystko wygarnąć, mam tego
+                                dosyć, miarka się
+                                przebrała.) <br>
+                                <u style="font-style: italic;">[Ściągając kaptur i komin]</u> Myślałem, że jesteś w
+                                szpitalu.</p>
+                            <p><strong>Ania</strong>: Paweł? Ja... Dopiero... Wyszłam.</p>
+                            <p><strong>?</strong>: Paweł? Jak się czujesz, młody?</p>
+                            <p><strong>Paweł</strong>: Dosłownie miałem Pana o to zapytać...</p>
+                            <p><strong>Ojciec Ani</strong>: A dlaczego, co się stało?</p>
+                            <p><strong>Ania</strong>: Ja... Ja wszystko-</p>
+                            <p><strong>Paweł</strong>: Ty już lepiej się nie odzywaj.</p>
+                            <p><strong>Ojciec Ani</strong>: O co chodzi?</p>
+                            <p><strong>Paweł</strong>: No bo wie Pan, zadzwoniłem rano do Ani, a ona powiedziała mi, że
+                                miał Pan wypadek. I
+                                że leży Pan w śpiączce.</p>
+                            <p><strong>Ojciec</strong>: Aniu, czy to prawda?</p>
+                            <p><strong>Ania</strong>: Tak...</p>
+                            <p><strong>Paweł</strong>: I teraz powiedz mi, jak ja mogę Ci zaufać z czymkolwiek? Dopiero
+                                płakałaś w szpitalu,
+                                bo podobno Twój tata nie miał szans na przeżycie, a teraz tak po prostu sobie z nim
+                                idziesz
+                                ulicą? Kiedy Ty przestaniesz mnie okłamywać? Powiedz mi, czego jeszcze nie wiem?</p>
+                            <p><strong>Ania</strong>: Tam w szpitalu... To był drugi mąż mojej mamy. I... Tak,
+                                okłamywałam Cię
+                                niejednokrotnie. Pamiętasz sytuację z Twoim bratem? To wszystko było kłamstwem. Jesteś
+                                po
+                                prostu kompletnym nudziarzem i beznadziejnym chłopakiem. Kiedy się spotykaliśmy, cały
+                                czas
+                                byłam z kimś innym i powiem Ci jedno. Jest o wiele lepszy od Ciebie. No i co, już nie
+                                jesteś
+                                taki pewny siebie?</p>
+                            <p><strong>Paweł</strong>: Ty suko-</p>
+                            <p><strong>Ojciec Ani</strong>: <u style="font-style: italic;">[popychając mnie]</u> Jak ty
+                                się wyrażasz gnojku do mojej córki?</p>
+                            <p><strong>Paweł</strong>: Tak, jak na to zasługuje. Do szmat nie mam szacunku.</p>
+                            <p><strong>Ojciec Ani</strong>: <u style="font-style: italic;">[łapiąc mnie za bluzę]</u>
+                                Marzy ci się zobaczyć gwiazdki?</p>
+                            <p><strong>Paweł</strong>: Haha, jeżeli Pan chce to proszę bardzo, ale nie wiem, czy to
+                                dobry pomysł.</p>
+                        </div>
+                        <p>
+                            Byłem przygotowany na każdą ewentualność. Szczerze to nie bałem się go, w szkole mieliśmy
+                            dużo zajęć sztuk walk, więc niech tylko spróbuje mnie uderzyć.
+                        </p>
+                        <div class="dialogue">
+                            <p><strong>Paweł</strong>: No co? Boi się Pan? A no przecież, taki sam tchórz jak Pańska
+                                córka.</p>
+                            <p><strong>Ania</strong>: Ja tchórz?</p>
+                            <p><strong>Ojciec Ani</strong>: Dosyć tego gnojku [uderza mnie]</p>
+                        </div>
+                        <p>
+                            Na jego nieszczęście zrobiłem lekki unik i dostałem w ramię. Wiem, że muszę uważać, bo na
+                            chodniku jeden upadek może skończyć się tragicznie, więc kopniaki w stronę głowy wykluczone.
+                            Sam dostałem jeszcze z dwa razy, jeden raz w nogę z kopniaka i drugi z liścia w policzek.
+                            Pomyślałem, koniec tego i wykonałem szybki cios na wątrobę. Nie ma gościa, którego taki cios
+                            by nie przyblokował, wiedział to i on.
+                        </p>
+                        <div class="dialogue">
+                            <p><strong>Ojciec Ani</strong>: Muszę... Przyznać... Że całkiem... Dobry jesteś...</p>
+                            <p><strong>Paweł</strong>: I niech będzie to dla Pana lekcja, żeby nie wyskakiwać do mnie z
+                                pięściami na
+                                następny raz. Mam nadzieję, że już się nie spotkamy. Żegnam.</p>
+                            <p><strong>Ania</strong>: Masz przesrane, zgłosimy to na Policję.</p>
+                            <p><strong>Paweł</strong>: Proszę bardzo, mam wszystko nagrane - to, że Twój tata zaczął i
+                                to, że jedyne co
+                                zrobiłem to się broniłem. Ja oberwałem trzy razy, a Twój tata jeden, ale konkretnie.</p>
+                        </div>
+                        <p>
+                            Mój następny cel: Złote Tarasy, Sephora. Już było dobrze po piętnastej, więc musiał wlecieć
+                            konkretny sprint, żebym zdążył się spotkać ze wszystkimi. Na szczęście wygrana walka dała mi
+                            niezły boost do morale, więc poczułem, jakbym biegł o wiele szybciej, niż kiedyś.
+                            Niby jest mi trochę smutno, że przez ten cały czas ta ****** mnie okłamywała, ale w sumie
+                            może to lepiej. Jak to tata mówił, tego kwiatu pół światu, a trzy-czwarte chuja warte XD
+                        </p>
+                        <p>
+                        <div class="iframe-container"></div>
+                        </p>
+                        <p>
+                            Biegnąc tak, zacząłem się zastanawiać, co tak naprawdę się odwaliło, bo raczej takie akcje
+                            nie dzieją się codziennie, a przynajmniej nie każdemu. Ale przysięgam, łatwiej jest już
+                            ugotować makaron w zlewie, niż ogarnąć co jakaś typiara miała w bani.
+                            Na słuchawkach wleciała mi playka The Score, a konkretnie piosenka Run Like a Rebel, która
+                            też pojawiła się w zapowiedzi trasy koncertowej po Europie, pod nazwą "Run Like a Rebel
+                            Tour". Dosłownie na słowa "Are we all addicted to living by design?" rzucił mi się w oczy
+                            piękny widok galerii:
+                        </p>
+                        <p style="text-align: center;">
+                            <img style="width: 100%" src="../../img/Chapter1_Throwback/zlotetarasy.jpg" alt="">
+                        </p>
+                        <p>
+                            Dość rzadko odwiedzaliśmy z rodziną Złote Tarase. Dużo bliżej mieliśmy do Renovy i w sumie
+                            dlatego dalej ciężko mi się jest odnaleźć w niektórych częściach tej galerii. Sam
+                            zastanawiałem się, gdzie jest ta nasza umówiona Sephora. Na grupie pisali, że przy którymś
+                            wejściu, ale wiecie, tych wejść to jest masa.
+                        </p>
+                        <p> Wszedłem tym wejściem widocznym na zdjęciu i przez chwilę błąkałem się po galerii w
+                            poszukiwaniu jakiejkolwiek wskazówki, gdzie mogłaby znajdować się Sephora. Po wymagających
+                            oględzinach miejsca, wreszcie znalazłem mapkę budynku. Wyglądało to tak, że musiałem mniej
+                            więcej pójść w lewo i wyjechać schodami piętro wyżej. Brawo Paweł, właśnie otrzymałeś
+                            odznakę debila! XD
+                        </p>
+                        <p>Zamiast pójść od razu, to spędziłem 10 minut szukając drogi. Po prostu brawo ja!</p>
+                        <p>
+                            Wyjeżdżając na piętro, odwróciłem się za siebie i kogo tam widzę? Cała ekipa! Łukasz, Oliwia
+                            i Natalia. W telefonie wibracje oczywiście, jak co praktycznie pięć sekund, każdy pyta się o
+                            mnie, gdzie jestem. Tak stoję, stoję przed tymi schodami, odwrócony w stronę przeciwną do
+                            moich przyjaciół i bardzo się denerwuję. Dawno nie widziałem Łukasza, a Oliwię i Natalię
+                            spotkam dopiero po raz pierwszy. No nic, idę, nie mam nic do stracenia.
+                            Skręciłem w prawo i "okrążyłem" cały zjazd. Najpierw podszedłem do Łukasza. Wleciała piona i
+                            męski przytulas. Jak ja go dawno nie widziałem, brakowało mi tego gościa.
+                            Potem przywitałem się z Natalią, a na końcu z Oliwią (tak jakoś wyszło). Pochodziliśmy sobie
+                            troszkę po galerii, a na końcu poszliśmy do maczka 😋. Tak w ogóle to w maku wbił do nas
+                            jeszcze Olaf, ten kumpel Łukasza. Mieszkał w sumie niedaleko, ale jakoś specjalnie wcześniej
+                            się nie widzieliśmy. Niby byłem głodny, ale jednak nic nie zamówiłem. Zaczynam normalnie
+                            siebie samego zadziwiać czasami. Czyżbym przeszedł na zdrowe jedzenie? Sałatki i inne
+                            wegetariańskie dania? Hmmm... Nie zrobię sobie tego. Lubię mięso. Mięso pyszne.
+                            Kiedy mieliśmy już jechać pod Proximę, Łukasz zadzwonił po swoich rodziców. Okazało się, że
+                            śmieszki siedziały stolik obok, a on ich nie zauważył, bo ich zasłoniłem przez przypadek.
+                            Myślałem, że padnę ze śmiechu.
+                            Tak w ogóle, to rodzice Łukasza mnie nie poznali. Podobno bardzo wyrosłem i
+                            "wyprzystojniałem". Jeju, byłem wtedy na pewno bardzo zawstydzony... Dobra, mniejsza.
+                            Mieliśmy podjechać pod Proximę z rodzicami Łukasza, razem z Olafem, żebyśmy nie musieli iść
+                            taki kawał drogi. W sumie, to z tego Olafa dość spoko typek, jakby nie patrzeć.
+                        </p>
+                        <p>
+                            Na rodziców Łukasza czekaliśmy jeszcze dobre 10 minut po zejściu do parkingu podziemnego, bo
+                            zgubili się i zjechali nie tam gdzie trzeba. W międzyczasie wymieniliśmy się discordami i
+                            nazwami kont na steamie, żeby sobie pograć kiedyś razem :)
+                            Mimo tego, że mieszkam w Warszawie, nie było łatwo nam znaleźć Proximę. Kompletnie nie
+                            miałem pojęcia, gdzie może być, więc łączyłem nawigację.
+                            Dojeżdżając, zauważyliśmy bramkę strażniczą. Wyszedłem do strażnika i zapytałem się, czy
+                            moglibyśmy zaparkować gdzieś pod Proximą. Ku naszemu zdziwieniu obyło się bez problemów
+                            (parking należał do Uniwersytetu), a my wjechaliśmy na parking.
+                        </p>
+                        <p>
+                            Przejeżdżając obok parku zauważyliśmy chłopaków z The Score - Eddiego i Edana. Tętno 3000,
+                            ale wychodzimy z nadzieją, że uda nam się strzelić z nimi selfiaczka. Na początku trochę
+                            nieśmiało, ale podeszliśmy do nich (akurat robili sobie zdjęcia)
+                        </p>
+                        <p>
+                            <img src="../../img/Chapter1_Throwback/TheScore-Poland_od.jpg" style="width: 100%" alt="">
+                        </p>
+                        <p>
+                            Pamiętając to, co Łukasz odwalił na Hackatonie, trochę się denerwowaliśmy, bo w końcu wygrał
+                            z Edanem, nawet użył ich piosenki na wejście. Tak jak mi wspominał, Edan nawet dał mu
+                            pewnego rodzaju dane kontaktowe prosto do niego. Byliśmy ciekawi, czy Edan go rozpozna.
+                        </p>
+                        <small style="font-style: italic;">Dialog z tłumaczeniem. Kliknij w tekst, aby
+                            przetłumaczyć</small>
+                        <div class="dialogue translatable">
+                            <p><strong>Łukasz</strong>: So guys, how do you like Poland?</p>
+                            <p><strong>Eddie</strong>: Ummm... Cold.</p>
+                            <p><strong>Paweł</strong>: Haha that's true.</p>
+                            <p><strong>Łukasz</strong>: No doubt it's a lot warmer in the LA.</p>
+                            <p><strong>Paweł</strong>: Have you guys tried pierogi yet?</p>
+                            <p><strong>Eddie</strong>: To be honest, we ate a ton of them!</p>
+                            <p><strong>Edan</strong>: So, do you wanna take a selfie?</p>
+                            <p><strong>Łukasz</strong>: That's why we are here!</p>
+                        </div>
+                        <p style="text-align: center;">
+                            <strong>**Po zrobieniu sobie zdjęć**</strong>
+                        </p>
+                        <small style="font-style: italic;">Dialog z tlumaczeniem. Kliknij w tekst, aby
+                            przetłumaczyć</small>
+                        <div class="dialogue translatable">
+                            <p><strong>Edan</strong> [do Łukasza]: You look familliar... Have we met before?</p>
+                            <p><strong>Łukasz</strong>: Umm, yeah. Do you remember that Hackathon in Sweden about an
+                                year ago?</p>
+                            <p><strong>Edan</strong>: Ohh, it's you! What's up!</p>
+                            <p><strong>Łukasz</strong>: Could've been better but we're really excited to be here.</p>
+                            <p><strong>Eddie</strong>: Edan mentioned you. You created that app called Vixon?</p>
+                            <p><strong>Łukasz</strong>: Yeah but I have to admit, wasn't easy at all.</p>
+                            <p><strong>Edan</strong>: Well, if you don't mind, can we use your app? We've seen some new
+                                features added lately that would be very useful for us.</p>
+                            <p><strong>Łukasz</strong>: Seriously you're asking for my permission? Come on! Of course
+                                you can!</p>
+                            <p><strong>Eddie</strong>: So, are you guys gonna be on the show tonight?</p>
+                            <p><strong>Paweł</strong>: Sure we will!</p>
+                            <p><strong>Łukasz</strong>: So, see you tonight!</p>
+                            <p><strong>Edan</strong>: See ya!</p>
+                        </div>
+                        <p>
+                            Jezu nie mogę uwierzyć, że udało się nam nawet z nimi porozmawiać i to jak długo! Ach ten to
+                            ma szczęście, poznać swojego idola, a potem spotkać go przed koncertem? Wielu by tak
+                            chciało!
+                            Idąc tak parkiem w stronę przyjaciół, bo zobaczyliśmy ich pod klubem, pomyśleliśmy, że może
+                            ogarniemy jeszcze na chwilę chłopaków i zrobimy sobie grupowe, jeśli by się na to zgodzili.
+                            Wzięliśmy więc Oliwię (bo Natalia się cykała) i poszliśmy do chłopaków. No tylko tego...
+                            Poszliśmy tak jakby na około, a nie przez park, przez co minęliśmy się z Eddiem i Edanem...
+                            Tak do tego wracając, to nie mogę uwierzyć, jaki to był pech! Do tego momentu obwiniamy się
+                            trochę z Łukaszem, że przez nas nie udało się jej zrobić sobie z nimi zdjęcia przed
+                            koncertem...
+                        </p>
+                        <p>
+                            Zostało nam już tylko czekać na resztę pod Proximą - nie było jeszcze Julki i drugiej
+                            Natalii. Sam chciałem przekonać Olafa, żeby został z nami na koncert. Nawet miał czym
+                            zapłacić za bilet, ale kiedy jego mama dowiedziała się (przez moje złe oszacowanie), że
+                            koncert może trwać prawie do jutra, nie zgodziła się i Olaf musiał nas opuścić lekko po
+                            osiemnastej. Tak więc zostaliśmy tylko w piątkę (Ja, Łukasz, Oliwia, Julka i Natalia). Druga
+                            Natalia podobno stała w tyle kolejki, tak więc jej nie widzieliśmy i spoiler alert - nie
+                            spotkaliśmy się z nią w ogóle. Trochę przykre biorąc pod uwagę to, że jednak była z nami na
+                            grupie i umawialiśmy się pod Proximę, no ale cóż.
+                        </p>
+                        <p>
+                            Najlepszą rzecz odwaliła obsługa klubu. Nie poinformowali nas, że jedna część schodów ma być
+                            wolna i kazali nam zejść z tej jednej części schodów. No tylko był jeden problem. Schody
+                            były tak zatłoczone, że głowa boli. Razem z Natalią, Oliwią i Łukaszem wepchaliśmy się na
+                            samą górę, pod same drzwi, żeby wejść jako jedni z pierwszych.
+                            Obsługa nie ustępowała i dalej kazała nam oczyścić jedną część schodów, ale bezcelowo. Nie
+                            dało się tego zrobić. Nikt nie będzie wracał się na sam tył kolejki, bo organizatorzy nie
+                            poinformowali nas wcześniej, że schody mają być wolne. Tak więc po otwarciu drzwi, weszliśmy
+                            praktycznie 4 albo 5 z kolei, odłożyliśmy swoje rzeczy i zajęliśmy miejsca pod sceną,
+                            dosłownie pierwszy rząd.
+                        </p>
+                        <p>Kupiliśmy sobie jeszcze bluzy "Run Like a Rebel", na pamiątkę po koncercie.</p>
+                        <p>
+                            <img src="../../img/Chapter1_Throwback/RunLikeaRebelHoodie.png"
+                                style="width:60%; position: relative; left: 20%" alt="">
+                        </p>
+                        <p>
+                            No i tak naprawdę co mogę więcej powiedzieć. Stanęliśmy pod sceną i czekaliśmy na
+                            rozpoczęcie koncertu o 20. Najpierw miał zagrać Carvel', czyli support The Score. Swoja
+                            drogą, spisali się świetnie! Mam nadzieję, że na następnym koncercie ponownie zagrają razem
+                            z nimi.
+                        </p>
+                        <p>Macie tu parę zdjęć z koncertu:</p>
+                        <p><img src="../../img/Chapter1_Throwback/Carvel-Poland.jpg" style="width:70%; position: relative; left: 15%" alt=""></p>
+                        <p><img src="../../img/Chapter1_Throwback/TheScore-Poland_Proxima.jpg" style="width:70%; position: relative; left: 15%" alt=""></p>
+                        <p><img src="../../img/Chapter1_Throwback/TS-Proxima.jpg" style="width:70%; position: relative; left: 15%" alt=""></p>
+                        <p><img src="../../img/Chapter1_Throwback/TheScore-Poland_cs.jpg" style="width:70%; position: relative; left: 15%" alt=""></p>
+                        <p>
+                            Było po prostu świetnie! Bardzo czekam na to, kiedy ogłoszą kolejny koncert, a wtedy znowu
+                            będziemy mogli spotkać się razem, pośpiewać i pobawić! Nasza ekipa jest najlepsza! ❤
+                        </p>
+                    </div>
+                    <ul class="actions">
+                        <li><a onclick="alert('Coming soon!')" class="button">CHAPTER 2: BLACKOUT</a></li>
+                    </ul>
+                    <hr>
+                </header>
+                <video src="" volume="0.5"></video>
+            </div>
+        </section>
+    </div>
+    <script>
+        const translatableDialogues = document.querySelectorAll('div.dialogue.translatable');
+        translatableDialogues.forEach((elem, i) => {
+            elem.addEventListener('click', () => {
+                translate(i)
+            })
+        })
+    </script>
+    <script defer src="https://lukasz26671.github.io/Skrypty/skel.min.js"></script>
+    <script defer src="https://lukasz26671.github.io/Skrypty/util.js"></script>
+    <script defer src="https://lukasz26671.github.io/Skrypty/main2.js"></script>
+    <script defer>
+            (() => {
+
+                document.querySelectorAll('img').forEach(img => img.style.borderRadius = '20px')
+
+                const ifContainer = document.querySelectorAll('.iframe-container')
+                const vid = [
+                    '<iframe class="responsive-iframe" src="https://www.youtube.com/embed/IDj_SBw3C_E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+                    '<video onloadstart="this.volume=0.5" controls class="responsive-iframe" src="https://website-audioprovider.herokuapp.com/download?ID=giMB1TXglhw&TYPE=mp4"></video>',
+
+                ]
+                setTimeout(() => {
+
+                    ifContainer.forEach((container, index) => {
+                        const videoIframe = vid[index];
+                        container.innerHTML += videoIframe;
+                    })
+
+                    //ifContainer[0].insertAdjacentHTML( 'beforeend', vid1 );
+
+                    const maxwidth = (px) => window.matchMedia(`(max-width: ${px}px)`).matches
+                    const minwidth = (px) => window.matchMedia(`(min-width: ${px}px)`).matches
+                    try {
+                        if (maxwidth(350)) {
+                            document.querySelectorAll('iframe.responsive-iframe').forEach(elem => {
+                                elem.width = '300';
+                                elem.style.height = "250"
+                            })
+                            document.querySelectorAll('img.responsive-image').forEach(elem => {
+                                elem.style.width = '300';
+                            })
+                        }
+                        else if (maxwidth(320)) {
+                            document.querySelectorAll('iframe.responsive-iframe').forEach(elem => {
+                                elem.width = '230';
+                                elem.height = '200';
+                            })
+                            document.querySelectorAll('.responsive-image').forEach(elem => {
+                                elem.width = '230';
+                                elem.height = '200';
+                            })
+
+                        }
+                        else if (minwidth(1200)) {
+                            document.querySelectorAll('iframe.responsive-iframe').forEach(elem => {
+                                elem.width = '1000';
+                                elem.height = '600';
+                            })
+                            document.querySelectorAll('.responsive-image').forEach(elem => {
+                                elem.style.width = "auto";
+                            })
+                        }
+                        else if (minwidth(900)) {
+                            document.querySelectorAll('iframe.responsive-iframe').forEach(elem => {
+                                elem.width = '800';
+                                elem.height = '600';
+                            })
+                        }
+                        else if (minwidth(700)) {
+                            document.querySelectorAll('iframe.responsive-iframe').forEach(elem => {
+                                elem.width = '500';
+                                elem.height = '400';
+                            })
+
+                            document.querySelectorAll('.responsive-image').forEach(elem => {
+                                elem.style.width = "500";
+                            })
+                        }
+
+
+                    } catch (err) { console.log(err) }
+
+                }, 700);
+            })();
+    </script>
+</body>
+
+</html>
